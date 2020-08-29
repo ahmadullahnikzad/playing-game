@@ -12,10 +12,22 @@ let myChoice=prompt('enter your choice');
 // console.log(status);
 function gamePlay(computerChoice,myChoice){
   let status;
-if(myChoice==computerChoice[Math.floor(Math.random()*computerChoice.length)]){
-  status=true;
+if(myChoice=='scissors'&&computerChoice[Math.floor(Math.random()*computerChoice.length)]=='paper'){
+  status='you won';
+}else if(myChoice=='rock'&&computerChoice[Math.floor(Math.random()*computerChoice.length)]=='paper'){
+  status='you won';
+}else if(myChoice=='rock'&&computerChoice[Math.floor(Math.random()*computerChoice.length)]=='scissors'){
+  status='you won';
+}else if(myChoice=='paper'&&computerChoice[Math.floor(Math.random()*computerChoice.length)]=='rock'){
+  status='you won';
+}else if(myChoice=='rock'&&computerChoice[Math.floor(Math.random()*computerChoice.length)]=='scissors'){
+  status='you won';
+}else if(myChoice=='scissors'&&computerChoice[Math.floor(Math.random()*computerChoice.length)]=='rock'){
+  status='you won';
+}else if(myChoice=='paper'&&computerChoice[Math.floor(Math.random()*computerChoice.length)]=='scissors'){
+  status='you won';
 }else{
-  status=false;
+  status='you failed';
 }
 console.log(status);
 }
