@@ -11,9 +11,11 @@ let myChoice=prompt('enter your choice');
 // }
 // console.log(status);
 function gamePlay(computerChoice,myChoice){
+  //we have not assigned this variable
   let status;
 if(myChoice=='scissors'&&computerChoice[Math.floor(Math.random()*computerChoice.length)]=='paper'){
   status='you won';
+  //we use Math.floor to round the random number then we used Math.random() to choose randomly elements from array then i multiplied Math.random() to computerChoice.length;
 }else if(myChoice=='rock'&&computerChoice[Math.floor(Math.random()*computerChoice.length)]=='paper'){
   status='you won';
 }else if(myChoice=='rock'&&computerChoice[Math.floor(Math.random()*computerChoice.length)]=='scissors'){
